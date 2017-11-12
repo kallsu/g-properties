@@ -49,9 +49,9 @@
 	<!-- Software Content Management -->
 	<!-- ============================================================================= -->
 	<scm>
-		<connection>scm:hg:https://bitbucket.org/kallsu/g-properties</connection>
-		<developerConnection>scm:hg:https://bitbucket.org/kallsu/g-properties</developerConnection>
-		<url>http://bitbucket.org/kallsu/g-properties</url>
+		<connection>scm:hg:https://github.com/kallsu/g-properties</connection>
+		<developerConnection>scm:hg:https://github.com/kallsu/g-properties</developerConnection>
+		<url>http://github.com/kallsu/g-properties</url>
 	</scm>
 
 	<!-- ============================================================================= -->

@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- ============================================================================= -->
+	<!-- General Information -->
+	<!-- ============================================================================= -->
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>g-properties</artifactId>
+	<version>1.0.3</version>
+	<packaging>jar</packaging>
+
+	<name>g-properties</name>
+	<description>G-Properties is the library to organize your properties files.</description>
+	<url>http://g-ee.sourceforge.net</url>
+
+	<!-- ============================================================================= -->
+	<!-- Parent POM Information -->
+	<!-- ============================================================================= -->
+	<parent>
+		<groupId>net.sf.gee</groupId>
+		<artifactId>g-parent</artifactId>
+		<version>0.1.18</version>
+	</parent>
+
+	<!-- ============================================================================= -->
+	<!-- License -->
+	<!-- ============================================================================= -->
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<!-- ============================================================================= -->
+	<!-- Developers -->
+	<!-- ============================================================================= -->
+	<developers>
+		<developer>
+			<name>Giorgio Desideri</name>
+			<email>Giorgio Desideri</email>
+			<organization>Owner</organization>
+			<organizationUrl>https://sourceforge.net/p/g-ee/wiki/Home/</organizationUrl>
+		</developer>
+	</developers>
+
+	<!-- ============================================================================= -->
+	<!-- Software Content Management -->
+	<!-- ============================================================================= -->
+	<scm>
+		<connection>scm:hg:https://bitbucket.org/kallsu/g-properties</connection>
+		<developerConnection>scm:hg:https://bitbucket.org/kallsu/g-properties</developerConnection>
+		<url>http://bitbucket.org/kallsu/g-properties</url>
+	</scm>
+
+	<!-- ============================================================================= -->
+	<!-- Properties Information -->
+	<!-- ============================================================================= -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<g-common.version>1.1.0</g-common.version>
+		<g-logger.version>1.2.0</g-logger.version>
+	</properties>
+
+
+	<!-- ============================================================================= -->
+	<!-- Dependencis Information -->
+	<!-- ============================================================================= -->
+	<dependencies>
+
+		<dependency>
+			<groupId>net.sf.gee</groupId>
+			<artifactId>g-logger</artifactId>
+			<version>${g-logger.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.gee</groupId>
+			<artifactId>g-common</artifactId>
+			<version>${g-common.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<!-- ============================================================================= -->
+	<!-- REPOSITORY Information -->
+	<!-- ============================================================================= -->
+	<repositories>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+
+			<id>orssh-releases</id>
+			<name>Open Source Software - Releases</name>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<!-- ============================================================================= -->
+	<!-- Build Information -->
+	<!-- ============================================================================= -->
+	<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

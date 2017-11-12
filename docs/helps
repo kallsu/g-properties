@@ -1,0 +1,10 @@
+Behavior
+
+- Search in classpath file named 'g-properties.conf'
+
+- Put here all your properties, or use property options to specify your properties files
+
+   classpath.property.files = file1, file2, file3 ( comma separated )
+   external.property.files = URI of file1, URI of file2 ( comma separated )
+   
+ - Every properties duplicate will be override by last occurence.
